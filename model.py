@@ -21,26 +21,7 @@ print(data.head(20))
 # get the columns and rows available
 print(data.shape)
 
-# check weather data is balance or not
-no_count = (data['y'] == 'no').sum()
-print(f"Number of values which has no = {no_count}")
 
-yes_count = (data['y'] == 'yes').sum()
-print(f"Number of values which has yes = {yes_count}")
-
-# According to above information we can see that dataset is Unbalance
-
-# check if null values are available or not
-print(data.info())
-
-# plot the data unbalance
-y = [yes_count,no_count]
-x = ['yes','no']
-inBlncFig,inBlncPlt = plt.subplots()
-inBlncPlt.bar(x, y, color=['green', 'red'])
-inBlncPlt.set_title('Unbalance dataset')
-inBlncFig.show()
-plt.pause(5)
 
 # Data Preprocess
 
